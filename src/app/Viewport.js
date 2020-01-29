@@ -67,7 +67,6 @@ class Viewport extends React.Component {
 
 			if( place === "between" ) {
 				const target2 = this.state.desk[index-1];
-				console.log('[between]', target1.year, over.year, target2.year, (over.year >= target1.year && target2.year >= over.year));
 				if( over.year >= target2.year && target1.year >= over.year ) {
 					desk.splice(index, 0, over);
 				} else {
