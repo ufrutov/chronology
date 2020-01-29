@@ -32,6 +32,7 @@
       "last 1 safari version"
     ]
   },
+  "homepage": "https://ufrutov.github.io/chronology/",
   "devDependencies": {
     "bootstrap": "^4.4.1",
     "gh-pages": "^2.2.0",
