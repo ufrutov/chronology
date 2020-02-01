@@ -15,11 +15,13 @@
 	height: inherit;
 	overflow: hidden; }
 .ch-desk {
+	position: relative;
 	display: flex;
 	flex-grow: 1;
 	align-items: center;
 	padding: 4px; }
-.ch-side {  }
+.ch-hint {
+	position: absolute; }
 
 .ch-desk--cards {
 	display: flex;
@@ -170,6 +172,24 @@
 	color: var(--white);
  }
 
+ .ch-hint.bs-popover-top .arrow,
+ .ch-hint.bs-popover-bottom .arrow {
+	left: 50%;
+	margin-left: -0.5rem; }
+ .ch-hint .arrow.arrow--left {
+ 	left: 20%; }
+ .ch-hint .arrow.arrow--right {
+ 	left: 80%; }
+.ch-hint--cards {
+	left: 50%;
+	top: auto;
+	bottom: -10px;
+	transform: translateX(-50%); }
+.ch-hint--desk {
+	top: 3%;
+	left: 50%;
+	transform: translateX(-50%); }
+
  .ch-result {
 	display: flex;
 	text-align: center;
@@ -198,6 +218,8 @@
 		padding: 6px; }
 	.ch-side--pack .ch-desk--item {
 		width: 200px; }
+	.ch-hint--desk {
+		top: 20%; }
 }
 
 /* Utils */

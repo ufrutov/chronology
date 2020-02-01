@@ -1,7 +1,8 @@
 import React from 'react';
 import OMDb from './OMDb';
-import Desk from './Desk'
-import Side from './Side'
+import Desk from './Desk';
+import Side from './Side';
+import Hint from './Hint';
 
 
 class Viewport extends React.Component {
@@ -13,7 +14,8 @@ class Viewport extends React.Component {
 			desk: [OMDb.getDefault()],
 			cards: [],
 			total: [],
-			failed: 0
+			failed: 0,
+			hint: true
 		};
 
 		this.placeCard = this.placeCard.bind(this);
@@ -101,6 +103,10 @@ class Viewport extends React.Component {
 					cards: cards,
 					total: total
 				});
+
+				if( this.state.hint ) {
+					this.setState({ hint: false });
+				}
 			}
 		} else {
 			console.warn('[W] Viewport.js - No cards left!');
@@ -117,6 +123,7 @@ class Viewport extends React.Component {
 				<Desk
 					desk={this.state.desk}
 					onCardPlace={this.placeCard} />
+				{ this.state.hint ? <Hint /> : null }
 			</div>
 			<div className="ch-side border-t bg-white">
 				<Side
