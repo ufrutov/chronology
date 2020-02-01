@@ -28,8 +28,8 @@
 	overflow-x: auto;
 	margin: 0 auto; }
 .ch-desk--cards .ch-desk--item {
-	min-width: 240px;
-	max-width: 240px; }
+	min-width: 200px;
+	max-width: 200px; }
 .ch-desk--cards .ch-desk--item .preview {
 	min-height: 230px; }
 .ch-desk--item {
@@ -226,6 +226,9 @@
 		width: 200px; }
 	.ch-hint--desk {
 		top: 20%; }
+	.ch-desk--cards .ch-desk--item {
+		min-width: 240px;
+		max-width: 240px; }
 }
 
 /* Utils */
