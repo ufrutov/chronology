@@ -105,6 +105,9 @@
 	height: 100%;
 	width: 50%; }
 
+.ch-desk--item .prev--first.mouse-over,
+.ch-desk--item .next.mouse-over,
+.ch-desk--item .next--last.mouse-over,
 .ch-desk--item .prev--first:hover,
 .ch-desk--item .next:hover,
 .ch-desk--item .next--last:hover {
@@ -133,7 +136,10 @@
 	background-color: var(--primary); }
 .ch-desk--item .prev--first:hover .hint,
 .ch-desk--item .next:hover .hint,
-.ch-desk--item .next--last:hover .hint {
+.ch-desk--item .next--last:hover .hint,
+.ch-desk--item .prev--first.mouse-over .hint,
+.ch-desk--item .next.mouse-over .hint,
+.ch-desk--item .next--last.mouse-over .hint {
 	display: block; }
 
 .ch-side--cards {

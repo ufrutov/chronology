@@ -39,7 +39,9 @@ class Side extends React.Component {
 					cards.map((c, i) => <div className={`ch-desk--item ${(active === i) ? "active" : ""}`}
 						key={i}
 						title={`${c.name} (${c.author})`}
-						onClick={e => this.selectCard(i)}>
+						onClick={e => this.selectCard(i)}
+						draggable={true}
+						onDragStart={e => this.selectCard(i)}>
 						<div className="preview" style={{ backgroundImage: `url(${c.preview})` }}></div>
 						<div className="desc">
 							<div className="title">{c.name}</div>

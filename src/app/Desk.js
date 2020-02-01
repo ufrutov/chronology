@@ -43,16 +43,28 @@ class Desk extends React.Component {
 						</div>
 					</div>
 					{ (index === 0) ? (
-						<div className="prev--first" onClick={e => this.placeCard(index, "prev")}>
+						<div className="prev--first" onClick={e => this.placeCard(index, "prev")}
+							onDragOver={e => { e.preventDefault(); }}
+							onDragEnter={e => { e.preventDefault(); e.target.classList.add('mouse-over'); }}
+							onDragLeave={e => { e.target.classList.remove('mouse-over'); }}
+							onDrop={e => { e.target.classList.remove('mouse-over'); this.placeCard(index, "prev"); }}>
 							<span className="hint hint--first">{i.year}</span>
 						</div> ) : null }
 					{ (index !== 0) ? (
-						<div className="next" onClick={e => this.placeCard(index, "between")}>
+						<div className="next" onClick={e => this.placeCard(index, "between")}
+							onDragOver={e => { e.preventDefault(); }}
+							onDragEnter={e => { e.preventDefault(); e.target.classList.add('mouse-over'); }}
+							onDragLeave={e => { e.target.classList.remove('mouse-over'); }}
+							onDrop={e => { e.target.classList.remove('mouse-over'); this.placeCard(index, "between"); }}>
 							<span className="hint hint--left">{items[index-1].year}</span>
 							<span className="hint hint--right">{i.year}</span>
 						</div> ) : null }
 					{ (index === items.length-1) ? (
-						<div className="next--last" onClick={e => this.placeCard(index, "next")}>
+						<div className="next--last" onClick={e => this.placeCard(index, "next")}
+							onDragOver={e => { e.preventDefault(); }}
+							onDragEnter={e => { e.preventDefault(); e.target.classList.add('mouse-over'); }}
+							onDragLeave={e => { e.target.classList.remove('mouse-over'); }}
+							onDrop={e => { e.target.classList.remove('mouse-over'); this.placeCard(index, "next"); }}>
 							<span className="hint hint--last">{i.year}</span>
 						</div> ) : null }
 				</div>) }
